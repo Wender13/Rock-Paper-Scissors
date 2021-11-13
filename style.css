@@ -77,7 +77,8 @@ footer {
     align-items: center;
     gap: 8px;
     position: fixed;
-    bottom: 0;
+    bottom:0;
+    left:0;
 }
 
 @media (max-width: 600px) {
@@ -86,9 +87,6 @@ footer {
     }
     .controls {
         gap: 20px;
-    }
-    footer {
-        position: relative;
     }
 }
 
