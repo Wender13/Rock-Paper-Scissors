@@ -28,7 +28,7 @@ header {
     gap: 50px;
 }
 
-.you, .pc {
+#you, #pc {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +36,7 @@ header {
     margin-bottom: 16px;
 }
 
-button {
+.buttons {
     background-color: #c4c4c4;
     border-radius: 30px;
     padding: 32px;
@@ -44,7 +44,7 @@ button {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.719);
 }
 
-button:active{
+.buttons:active{
     position:relative;
     top: 2px;
     left: 2px;
@@ -65,6 +65,11 @@ a {
 
 a:hover {
     color: #FD7D32;
+}
+
+#gameResult {
+    margin: 8px;
+    text-align: center;
 }
 
 footer {

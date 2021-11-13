@@ -16,34 +16,35 @@
         </h1>
     </header>
     <div class="results">
-        <div class="you">
+        <div id="you">
             <h2>
-                You: X
+                You:
             </h2>
-            <div>
-                <img src="images/rock-white.png" alt="Rock">
-            </div>
+            <p id="yourScore">
+            </p>
         </div>
-        <div class="pc">
+        <div id="pc">
             <h2>
-                PC: X
+                Pc:
             </h2>
-            <div>
-                <img src="images/rock-white.png" alt="Rock">
-            </div>
+            <p id="pcScore">
+            </p>
         </div>
     </div>
     <div class="controls">
-        <button>
+        <div id="Rock" class="buttons" onclick="choiceRock()">
             <img src="images/rock-button.png" alt="Rock">
-        </button>
-        <button>
+        </div>
+        <div id="Paper" class="buttons" onclick="choicePaper()">
             <img src="images/paper-button.png" alt="Paper">
-        </button>
-        <button>
+        </div>
+        <div id="Scissor" class="buttons" onclick="choiceScissor()">
             <img src="images/scissor-button.png" alt="Scissor">
-        </button>
+        </div>
     </div>
+    <p id="gameResult">
+        The result gonna be showed here...
+    </p>
     <footer>
         <p>
            Copyright © <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
