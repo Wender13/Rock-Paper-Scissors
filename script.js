@@ -11,6 +11,48 @@ function randomChoice() {
     return choices[randomize]
 }
 
+// Restart button's functions and properties
+
+function reset() {
+    location.reload()
+}
+
+function putButton() {
+    let button = document.getElementById('restart')
+    button.style.display = ""
+}
+
+function removeButton() {
+    let button = document.getElementById('restart')
+    button.style.display = "none"
+}
+
+// Functions to check who win the game 
+
+function checkPlayerScore(playerScore) {
+    let resultMessage = document.getElementById('gameResult')
+    let winnerMessage = document.getElementById('winner')
+    let screen = document.getElementById('controls&results')
+    if (playerScore == 5) {
+        screen.style.display = "none"
+        winnerMessage.innerHTML = "The player won!"
+        resultMessage.innerHTML = ""
+        putButton()
+    }
+}
+
+function checkComputerScore(computerScore) {
+    let resultMessage = document.getElementById('gameResult')
+    let winnerMessage = document.getElementById('winner')
+    let screen = document.getElementById('controls&results')
+    if (computerScore == 5) {
+        screen.style.display = "none"
+        winnerMessage.innerHTML = "The computer won!"
+        resultMessage.innerHTML = ""
+        putButton()
+    }
+}
+
 // Results' functions
 
 function win(player, computer) {
@@ -19,6 +61,7 @@ function win(player, computer) {
     let resultMessage = document.getElementById('gameResult')
     resultMessage.innerHTML = `${player} beats ${computer}!`
     playerScoreDisplay.innerHTML = playerScore
+    checkPlayerScore(playerScore)
 }
 
 function lose(player, computer) {
@@ -27,6 +70,7 @@ function lose(player, computer) {
     let resultMessage = document.getElementById('gameResult')
     resultMessage.innerHTML = `${computer} beats ${player}!`
     computerScoreDisplay.innerHTML = computerScore
+    checkComputerScore(computerScore)
 }
 
 function draw() {

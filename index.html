@@ -9,7 +9,7 @@
     <script src="script.js"></script>
     <title>Rock/Paper/Scissors</title>
 </head>
-<body>
+<body onload="removeButton()">
     <header>
         <h1>
             Rock x Paper x Scissors
@@ -18,27 +18,35 @@
     <div class="results">
         <div id="you">
             Player:
-            <p id="yourScore"></p>
+            <p id="yourScore">
+                X
+            </p>
         </div>
         <div id="pc">
             Computer:
-            <p id="pcScore"></p>
+            <p id="pcScore">
+                X
+            </p>
         </div>
     </div>
-    <div class="controls">
-        <div id="Rock" class="buttons" onclick="choiceRock()">
-            <img src="images/rock-button.png" alt="Rock">
-        </div>
-        <div id="Paper" class="buttons" onclick="choicePaper()">
-            <img src="images/paper-button.png" alt="Paper">
-        </div>
-        <div id="Scissor" class="buttons" onclick="choiceScissor()">
-            <img src="images/scissor-button.png" alt="Scissor">
+    <div id="controls&results">
+        <div id="controls">
+            <div id="Rock" class="buttons" onclick="choiceRock()">
+                <img src="images/rock-button.png" alt="Rock">
+            </div>
+            <div id="Paper" class="buttons" onclick="choicePaper()">
+                <img src="images/paper-button.png" alt="Paper">
+            </div>
+            <div id="Scissor" class="buttons" onclick="choiceScissor()">
+                <img src="images/scissor-button.png" alt="Scissor">
+            </div>
         </div>
     </div>
-    <p id="gameResult">
-        The result gonna be showed here...
-    </p>
+        <p id="gameResult">
+            The result gonna be showed here...
+        </p>
+        <p id="winner"></p>
+        <div id="restart" onclick="reset()">Reset</div>
     <footer>
         <p>
            Copyright © <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
